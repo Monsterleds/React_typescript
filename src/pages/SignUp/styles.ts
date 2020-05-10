@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { shade } from 'polished';
 
-import knifes from '../../assets/knifecsgo.jpg';
+import knifes from '../../assets/wallpaperSignUp.jpg';
 
 export const Container = styled.div`
   display: flex;

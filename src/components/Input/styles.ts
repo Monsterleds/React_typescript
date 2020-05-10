@@ -68,8 +68,6 @@ export const Container = styled.div<ContainerProps>`
   ${(props) =>
     props.isFilled &&
     css`
-      border: 2px solid transparent;
-
       svg {
         color: #620d7b;
       }

@@ -31,6 +31,7 @@ const SignUp: React.FC = () => {
       console.log(data);
     } catch (err) {
       const errors = ValidationErrors(err);
+
       FormRef.current?.setErrors(errors);
     }
   }, []);
