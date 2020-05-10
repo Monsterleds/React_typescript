@@ -1,6 +1,6 @@
 import React, { useCallback } from 'react';
 
-import { FiLogIn, FiMail, FiLock } from 'react-icons/fi';
+import { FiLogIn, FiMail, FiLock, FiUser } from 'react-icons/fi';
 import { Form } from '@unform/web';
 import { Container, Content, Background } from './styles';
 import Logo from '../../assets/NoPath.png';
@@ -8,17 +8,19 @@ import Logo from '../../assets/NoPath.png';
 import Input from '../../components/Input';
 import Button from '../../components/Button';
 
-const SignIn: React.FC = () => {
+const SignUp: React.FC = () => {
   const handleSubmit = useCallback((data: object) => {
     console.log(data);
   }, []);
 
   return (
     <Container>
+      <Background />
       <Content>
         <img src={Logo} alt="Logo" />
         <h2>Faça seu logon</h2>
         <Form onSubmit={handleSubmit}>
+          <Input icon={FiUser} type="text" name="user" placeholder="User" />
           <Input icon={FiMail} type="text" name="email" placeholder="Email" />
           <Input
             icon={FiLock}
@@ -35,8 +37,7 @@ const SignIn: React.FC = () => {
           Criar conta
         </a>
       </Content>
-      <Background />
     </Container>
   );
 };
-export default SignIn;
+export default SignUp;

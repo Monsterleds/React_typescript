@@ -16,11 +16,11 @@ export const Container = styled.div<ContainerProps>`
   border-radius: 10px;
   border: 2px solid transparent;
   padding: 10px 20px;
-  background-color: #221C24;
+  background-color: #221c24;
   transition: 0.2s;
 
   & + div {
-    margin: 10px;
+    margin-top: 10px;
   }
 
   input {
@@ -28,33 +28,37 @@ export const Container = styled.div<ContainerProps>`
     height: 100%;
     flex: 1;
     background-color: transparent;
-    -webkit-box-shadow: 0 0 0px 1000px #221C24 inset;
-    -webkit-text-fill-color: #C6C6C6;
-    color: #620D7B;
+    -webkit-box-shadow: 0 0 0px 1000px #221c24 inset;
+    -webkit-text-fill-color: #c6c6c6;
+    color: #620d7b;
 
     ::placeholder {
-      -webkit-text-fill-color: #5D5D5D;
+      -webkit-text-fill-color: #5d5d5d;
       font-size: 16px;
     }
   }
 
   svg {
-    color: #5D5D5D;
+    color: #5d5d5d;
     margin-right: 10px;
     transition: 0.2s;
   }
 
-  ${props => props.isFocused && css`
-    border: 2px solid #620D7B;
+  ${(props) =>
+    props.isFocused &&
+    css`
+      border: 2px solid #620d7b;
 
-    svg {
-      color: #620D7B;
-    }
-  `}
+      svg {
+        color: #620d7b;
+      }
+    `}
 
-  ${props => props.isFilled && css`
-    svg {
-      color: #620D7B;
-    }
-  `}
+  ${(props) =>
+    props.isFilled &&
+    css`
+      svg {
+        color: #620d7b;
+      }
+    `}
 `;
