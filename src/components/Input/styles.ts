@@ -46,6 +46,14 @@ export const Container = styled.div<ContainerProps>`
   }
 
   ${(props) =>
+    props.isFilled &&
+    css`
+      svg {
+        color: #620d7b;
+      }
+    `}
+
+  ${(props) =>
     props.isErrored &&
     css`
       border: 2px solid #c53030;
@@ -60,14 +68,6 @@ export const Container = styled.div<ContainerProps>`
     css`
       border: 2px solid #620d7b;
 
-      svg {
-        color: #620d7b;
-      }
-    `}
-
-  ${(props) =>
-    props.isFilled &&
-    css`
       svg {
         color: #620d7b;
       }
